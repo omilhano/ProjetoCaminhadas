@@ -4,7 +4,8 @@
 
 }
 
-html, body {
+html,
+body {
     max-width: 100%;
     overflow-x: hidden;
 }
@@ -13,19 +14,22 @@ section {
     height: 100dvh;
 }
 
-.landing{
+.landing {
     background-color: #C6DCBA;
+    background-image: url("landing-image.jpeg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
-img {}
 
-a{
+a {
     text-decoration: none;
-    color: black;
+    color: #b4f5ba;
 }
 
-a:hover{
-    color: black;
+a:hover {
+    color: white;
 }
 
 .list-item::after {
@@ -48,8 +52,44 @@ a:hover{
 
 .list-item {
     font-family: 'Montserrat', 'Times New Roman';
-    font-size: 18px;
+    font-size: 1.3rem;
     position: relative;
     transition: all 0.4s;
-    color: #534a58;
+    color: white;
+}
+
+.fa-leaf {
+    height: 100%;
+}
+
+.navbar-toggler {
+    height: 50px;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none !important;
+}
+
+.landing-text {
+    width: 75%;
+    padding-top: 170px;
+    margin: auto;
+}
+
+.title {
+    font-family: 'Montserrat', 'Times New Roman';
+    font-size: 3rem;
+    color: white;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.descriptive-text {
+    font-family: 'Montserrat', 'Times New Roman';
+    font-size: 1.5rem;
+    color: white;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 1.4s ease-out, transform 1.4s ease-out;
 }
