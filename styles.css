@@ -8,6 +8,7 @@ html,
 body {
     max-width: 100%;
     overflow-x: hidden;
+    font-family: 'Lato', Helvetica, Arial, Lucida, sans-serif;
 }
 
 section {
@@ -16,21 +17,50 @@ section {
 
 .landing {
     background-color: #C6DCBA;
-    background-image: url("landing-image.jpeg");
+    background-image: url("landing-image.webp");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
 }
 
+.body-part1 {
+    background-color: #d5dbdb;
+    background-image: linear-gradient(-90deg, rgba(255, 255, 255, 0) 64%, #115d5e 64%) !important;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.body-part2 {
+    background-color: #d5dbdb;
+    background-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 64%, #115d5e 64%) !important;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
 
 a {
+
     text-decoration: none;
-    color: #b4f5ba;
 }
 
-a:hover {
+.citation {
+    margin-right: 10%;
+    text-align: right;
     color: white;
+    font-weight: 500;
+    font-size: 1.2rem;
 }
+
+.citation blockquote {
+    margin: 0;
+}
+
+.citation figcaption {
+    margin-top: 5px;
+    font-style: italic;
+}
+
 
 .list-item::after {
     content: '';
@@ -51,8 +81,7 @@ a:hover {
 }
 
 .list-item {
-    font-family: 'Montserrat', 'Times New Roman';
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     position: relative;
     transition: all 0.4s;
     color: white;
@@ -72,24 +101,70 @@ a:hover {
 
 .landing-text {
     width: 75%;
-    padding-top: 170px;
+    padding-top: 150px;
     margin: auto;
 }
 
 .title {
-    font-family: 'Montserrat', 'Times New Roman';
+    font-weight: 600;
     font-size: 3rem;
+    color: #709D9E;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+
+.descriptive-text {
+    font-weight: 600;
+    font-size: 1.5rem;
     color: white;
     opacity: 0;
     transform: translateX(-100%);
     transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
-.descriptive-text {
-    font-family: 'Montserrat', 'Times New Roman';
+.group-walks {
+    display: flex;
+}
+
+.left-text {
+    float: left;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+.right-image {
+    margin-top: 4.5%;
+    margin-left: 6%;
+    float: right;
+    height: 100%;
+    height: fit-content;
+}
+
+.group-of-people {
+    max-width: 600px;
+    max-width: 500px;
+}
+
+.group-title {
+    font-weight: 700;
+    font-family: 'Cormorant', Georgia, "Times New Roman", serif;
+    color: #4c4c4c;
+}
+
+.descriptive-group {
     font-size: 1.5rem;
-    color: white;
-    opacity: 0;
-    transform: translateX(-100%);
-    transition: opacity 1.4s ease-out, transform 1.4s ease-out;
+    color: #4c4c4c;
+    font-family: 'Cormorant', Georgia, "Times New Roman", serif;
+}
+
+@media only screen and (max-width: 600px) {
+    .descriptive-text {
+        font-size: 1rem;
+        color: white;
+    }
 }
