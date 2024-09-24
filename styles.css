@@ -101,13 +101,13 @@ a {
 
 .landing-text {
     width: 75%;
-    padding-top: 150px;
+    margin-top: 10%;
     margin: auto;
 }
 
 .title {
-    font-weight: 600;
-    font-size: 3rem;
+    font-weight: 400;
+    font-size: 3em;
     color: #709D9E;
     opacity: 0;
     transform: translateX(-100%);
@@ -116,12 +116,13 @@ a {
 
 
 .descriptive-text {
-    font-weight: 600;
-    font-size: 1.5rem;
+    font-weight: 250;
+    font-size: 1.5em;
     color: white;
     opacity: 0;
     transform: translateX(-100%);
     transition: opacity 1s ease-out, transform 1s ease-out;
+    overflow: hidden;
 }
 
 .group-walks {
@@ -145,8 +146,21 @@ a {
     height: fit-content;
 }
 
+.left-image {
+    margin-top: 6.5%;
+    margin-left: 15.5%;
+    float: left;
+    height: 100%;
+    height: fit-content;
+}
+
+.owner{
+    min-width: 280px;
+    max-width: 450px;
+    min-height: 450px;
+}
+
 .group-of-people {
-    max-width: 600px;
     max-width: 500px;
 }
 
@@ -157,7 +171,7 @@ a {
 }
 
 .descriptive-group {
-    font-size: 1.5rem;
+    font-size: 1.5em;
     color: #4c4c4c;
     font-family: 'Cormorant', Georgia, "Times New Roman", serif;
 }
