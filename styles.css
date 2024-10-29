@@ -12,15 +12,19 @@ body {
 }
 
 section {
-    height: 100dvh;
+    height: 100vh;
 }
 
 .landing {
     background-color: #C6DCBA;
     background-image: url("landing-image.webp");
+    /* alterar imagem de fundo */
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
 }
 
 .body-part1 {
@@ -35,6 +39,7 @@ section {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+
     /* background-color: #d5dbdb;
     background-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 64%, #848c5f 64%) !important;
     background-repeat: no-repeat;
@@ -104,6 +109,7 @@ a {
 
 .landing-text {
     width: 75%;
+    /* tornar mais magrinho diminuir width consoante visibilidade com a foto de fundo*/
     margin-top: 10%;
     margin: auto;
 }
@@ -120,15 +126,19 @@ a {
 
 .descriptive-text {
     font-weight: 250;
-    font-size: 1.5em;
+    font-size: 1.1em;
+    line-height: 1.4;
+    /* Adjusted for readability */
     color: white;
     opacity: 0;
     transform: translateX(-100%);
     transition: opacity 1s ease-out, transform 1s ease-out;
     overflow: hidden;
+    text-align: center;
 }
 
-.group-walks {
+.group-walks,
+.presentation {
     display: flex;
 }
 
@@ -136,9 +146,10 @@ a {
     float: left;
     display: flex;
     flex-direction: column;
-    width: 40%;
+    width: 35%;
     margin-top: 5%;
-    margin-left: 5%;
+    margin-left: 4%;
+    align-items: center;
 }
 
 .right-image {
@@ -151,10 +162,19 @@ a {
 
 .left-image {
     margin-top: 6.5%;
-    margin-left: 15.5%;
+    margin-left: 8%;
     float: left;
     height: 100%;
-    height: fit-content;
+}
+
+.right-text {
+    float: right;
+    display: flex;
+    flex-direction: column;
+    margin-left: 4%;
+    color: #4c4c4c;
+    margin-top: 5%;
+    font-family: 'Cormorant', Georgia, "Times New Roman", serif;
 }
 
 .owner {
@@ -174,14 +194,42 @@ a {
 }
 
 .descriptive-group {
-    font-size: 1.5em;
+    font-size: 1.2em;
     color: #4c4c4c;
     font-family: 'Cormorant', Georgia, "Times New Roman", serif;
 }
 
-@media only screen and (max-width: 600px) {
+#schedule-walks {
+    background-color: #709D9E;
+    border: none;
+    font-family: 'Cormorant', Georgia, "Times New Roman", serif;
+    margin: 4px 2px;
+    padding: 15px 25px;
+    border-radius: 25px;
+}
+
+@media only screen and (max-width: 650px) {
+    .landing-text {
+        width: 95%;
+        margin-top: 1%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
     .descriptive-text {
         font-size: 1rem;
-        color: white;
+        font-weight:350;
     }
+
+    .citation {
+        font-size: 0.9rem;
+    }
+
+    .fa-leaf{max-height: 50px;}
 }
