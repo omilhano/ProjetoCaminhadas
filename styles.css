@@ -12,7 +12,7 @@ body {
 }
 
 section {
-    height: 100vh;
+    height: 110vh;
 }
 
 .landing {
@@ -110,31 +110,24 @@ a {
 .landing-text {
     width: 75%;
     /* tornar mais magrinho diminuir width consoante visibilidade com a foto de fundo*/
-    margin-top: 10%;
-    margin: auto;
+    margin-top: 5%;
+    margin-left: 10%;
 }
 
 .title {
     font-weight: 400;
     font-size: 3em;
     color: #709D9E;
-    opacity: 0;
-    transform: translateX(-100%);
-    transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
 
 .descriptive-text {
-    font-weight: 250;
-    font-size: 1.1em;
-    line-height: 1.4;
+    font-weight: 500;
+    font-size: 1.5em;
+    line-height: 1.1;
     /* Adjusted for readability */
     color: white;
-    opacity: 0;
-    transform: translateX(-100%);
-    transition: opacity 1s ease-out, transform 1s ease-out;
     overflow: hidden;
-    text-align: center;
 }
 
 .group-walks,
@@ -173,8 +166,10 @@ a {
     flex-direction: column;
     margin-left: 4%;
     color: #4c4c4c;
-    margin-top: 5%;
+    text-align: center;
+    margin-top: auto;
     font-family: 'Cormorant', Georgia, "Times New Roman", serif;
+    width: 50%;
 }
 
 .owner {
@@ -209,27 +204,42 @@ a {
 }
 
 @media only screen and (max-width: 650px) {
+    .landing {
+        align-items: center;
+        background-size: cover; /* Keeps aspect ratio */
+        background-attachment: scroll; /* Allows mobile-friendly scrolling */
+        background-position: center top; /* Aligns image to start at the top */
+    }
+
     .landing-text {
-        width: 95%;
-        margin-top: 1%;
+        margin-top: 2.5%;
+        width: 80%;
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
+        margin-left: 0%;
+        word-break: break-word;
+        justify-content: center;
     }
 
     .title {
         font-size: 1.5rem;
+        font-weight: 600;
+        margin-top: 0;
     }
 
     .descriptive-text {
-        font-size: 1rem;
-        font-weight:350;
+        font-size: 18px;
+        font-weight: 350;
+        line-height: 1.1;
+        font-weight: 400;
     }
 
     .citation {
-        font-size: 0.9rem;
+        display: none;
     }
 
-    .fa-leaf{max-height: 50px;}
+    .fa-leaf {
+        max-height: 50px;
+    }
 }
